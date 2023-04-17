@@ -1,0 +1,17 @@
+Changelog
+---------
+1.2.2
+ Added `fastlyUrl` as an optional parameter to all methods, allowing callers to choose specific urls to hit. All methods default to `https://api.fastly.com`
+
+1.2.1
+ Added `Fastly-Soft-Purge` header, which was missing in `softPurgeKeys` method
+
+1.2
+ Include softPurgeKeys to allow batch call to purge by multiple surrogate keys.
+ Add precondition check to validate we can only pass up to 256 keys.
+
+1.1
+ Include client version on each request. Example: `"User-Agent" -> "fastly-api-java-v1.1"`
+
+1.0
+ initial version
